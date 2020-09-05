@@ -4,10 +4,10 @@
   Source project:	https://github.com/SwiftOnSecurity/sysmon-config
   Source license:	Creative Commons Attribution 4.0 | You may privatize, fork, edit, teach, publish, or deploy for commercial use - with attribution in the text.
 
-  Fork version:	<N/A>
-  Fork author:	<N/A>
-  Fork project:	<N/A>
-  Fork license:	<N/A>
+  Fork version:	1 | Date: 2020-09-05
+  Fork author:	Farrell Lee aka Lara Lee
+  Fork project:	sysmon-config
+  Fork license:	Creative Commons Attribution 4.0 | You may privatize, fork, edit, teach, publish, or deploy for commercial use - with attribution in the text.
 
   REQUIRED: Sysmon version 10.0.4.1 or higher (due to changes in syntax and bug-fixes)
 	https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
@@ -509,6 +509,10 @@
 			<TargetFilename condition="end with">.xls</TargetFilename> <!--Legacy Office files are often used for attacks-->
 			<TargetFilename condition="end with">.ppt</TargetFilename> <!--Legacy Office files are often used for attacks-->
 			<TargetFilename condition="end with">.rtf</TargetFilename> <!--RTF files often 0day malware vectors when opened by Office-->
+
+			<!--My condition-->
+			<!-- <TargetFilename condition="contains">Test</TargetFilename> File Name detection -->
+			<TargetFilename condition="begin with">C:\Users\Administrator\Desktop</TargetFilename> <!--File Folder detection-->
 		</FileCreate>
 	</RuleGroup>
 
